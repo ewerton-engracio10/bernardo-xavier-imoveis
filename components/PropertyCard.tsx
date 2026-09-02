@@ -1,15 +1,18 @@
 import Link from "next/link";
 import type { Property } from "@/data/properties";
 
-export function PropertyCard({ property, index = 0 }: { property: Property; index?: number }) {
+export function PropertyCard({ property }: { property: Property; index?: number }) {
   return (
     <article className="property-card">
-      <div className={`property-image property-image-${(index % 3) + 1}`}>
+      <Link
+        href={`/empreendimentos/${property.slug}`}
+        className="property-image"
+        aria-label={`Ver ${property.name}`}
+      >
+        <img src={property.coverImage.src} alt={property.coverImage.alt} />
         <span className="property-status">{property.status}</span>
-        <div className="building-placeholder" aria-hidden="true">
-          <span /><span /><span /><span /><span />
-        </div>
-      </div>
+        <span className="property-image-label">Fachada</span>
+      </Link>
       <div className="property-content">
         <span className="eyebrow">{property.neighborhood}</span>
         <h3>{property.name}</h3>

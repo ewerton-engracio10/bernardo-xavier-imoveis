@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3d352e"/><stop offset="1" stop-color="#151416"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect x="100" y="130" width="650" height="470" fill="#777069" fill-opacity=".22" stroke="#cdaa6d" stroke-opacity=".35"/>
+  <rect x="850" y="250" width="560" height="250" rx="12" fill="#242326" stroke="#cdaa6d" stroke-opacity=".35"/>
+  <rect x="930" y="510" width="400" height="120" rx="8" fill="#2d2b2a"/>
+  <text x="80" y="760" fill="#e2c58f" font-family="Arial, sans-serif" font-size="28" letter-spacing="7">LIVING / ÁREA SOCIAL</text>
+  <text x="80" y="810" fill="#85858b" font-family="Arial, sans-serif" font-size="18" letter-spacing="3">SUBSTITUIR PELA FOTO REAL DO MESMO IMÓVEL</text>
+</svg>

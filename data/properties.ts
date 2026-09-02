@@ -1,3 +1,9 @@
+export type PropertyImage = {
+  src: string;
+  alt: string;
+  type: "Fachada" | "Interior" | "Área comum" | "Vista";
+};
+
 export type Property = {
   slug: string;
   name: string;
@@ -10,10 +16,43 @@ export type Property = {
   priceFrom: string;
   shortDescription: string;
   highlights: string[];
+  /** A imagem dos cards/listagens deve ser SEMPRE uma fachada externa. */
+  coverImage: PropertyImage;
+  /** Galeria completa exibida somente na página individual do empreendimento. */
+  gallery: PropertyImage[];
 };
 
-// IMPORTANTE: dados demonstrativos para estruturar o projeto.
-// Substituir por empreendimentos reais antes da publicação do site.
+const demoGallery = (neighborhood: string): PropertyImage[] => [
+  {
+    src: "/images/properties/placeholders/fachada.svg",
+    alt: `Fachada do empreendimento em ${neighborhood}`,
+    type: "Fachada",
+  },
+  {
+    src: "/images/properties/placeholders/living.svg",
+    alt: `Living do empreendimento em ${neighborhood}`,
+    type: "Interior",
+  },
+  {
+    src: "/images/properties/placeholders/suite.svg",
+    alt: `Suíte do empreendimento em ${neighborhood}`,
+    type: "Interior",
+  },
+  {
+    src: "/images/properties/placeholders/leisure.svg",
+    alt: `Área de lazer do empreendimento em ${neighborhood}`,
+    type: "Área comum",
+  },
+  {
+    src: "/images/properties/placeholders/view.svg",
+    alt: `Vista do empreendimento em ${neighborhood}`,
+    type: "Vista",
+  },
+];
+
+// IMPORTANTE: dados e imagens demonstrativos para estruturar o projeto.
+// Antes da apresentação final/publicação, substituir cada conjunto pela fachada
+// e pelas fotos reais DO MESMO empreendimento.
 export const properties: Property[] = [
   {
     slug: "residencial-ipanema-demo",
@@ -33,6 +72,8 @@ export const properties: Property[] = [
       "Plantas selecionadas",
       "Atendimento direto com Bernardo",
     ],
+    coverImage: demoGallery("Ipanema")[0],
+    gallery: demoGallery("Ipanema"),
   },
   {
     slug: "residencial-leblon-demo",
@@ -52,6 +93,8 @@ export const properties: Property[] = [
       "Informações objetivas",
       "Contato consultivo",
     ],
+    coverImage: demoGallery("Leblon")[0],
+    gallery: demoGallery("Leblon"),
   },
   {
     slug: "residencial-copacabana-demo",
@@ -68,8 +111,10 @@ export const properties: Property[] = [
     highlights: [
       "Zona Sul do Rio",
       "Curadoria estratégica",
-      "Apresentação enxuta",
-      "Sem disponibilização do book completo",
+      "Apresentação objetiva",
+      "Galeria completa na página do imóvel",
     ],
+    coverImage: demoGallery("Copacabana")[0],
+    gallery: demoGallery("Copacabana"),
   },
 ];

@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { PropertyGallery } from "@/components/PropertyGallery";
 import { properties } from "@/data/properties";
 import { whatsappUrl } from "@/lib/site-config";
 
@@ -18,28 +19,38 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
   return (
     <main>
       <Header />
+
       <section className="detail-hero">
-        <div className="container detail-grid">
-          <div className="detail-image">
-            <div className="building-placeholder large" aria-hidden="true">
-              <span /><span /><span /><span /><span /><span />
+        <div className="container">
+          <div className="detail-title">
+            <div>
+              <span className="eyebrow gold">{property.status}</span>
+              <h1>{property.name}</h1>
+              <p className="location">{property.neighborhood}, {property.city}</p>
             </div>
-          </div>
-          <div className="detail-copy">
-            <span className="eyebrow gold">{property.status}</span>
-            <h1>{property.name}</h1>
-            <p className="location">{property.neighborhood}, {property.city}</p>
-            <div className="detail-meta">
-              <div><small>Quartos</small><strong>{property.bedrooms}</strong></div>
-              <div><small>Área</small><strong>{property.area}</strong></div>
-              <div><small>Vagas</small><strong>{property.parking}</strong></div>
-            </div>
-            <div className="detail-price">
+            <div className="detail-price title-price">
               <small>Valor de investimento</small>
               <strong>{property.priceFrom}</strong>
             </div>
-            <p>{property.shortDescription}</p>
-            <a className="button button-gold" href={whatsappUrl(message)}>Falar com Bernardo</a>
+          </div>
+
+          <PropertyGallery images={property.gallery} propertyName={property.name} />
+
+          <div className="detail-content-grid">
+            <div>
+              <div className="detail-meta">
+                <div><small>Quartos</small><strong>{property.bedrooms}</strong></div>
+                <div><small>Área</small><strong>{property.area}</strong></div>
+                <div><small>Vagas</small><strong>{property.parking}</strong></div>
+              </div>
+              <p className="detail-description">{property.shortDescription}</p>
+            </div>
+            <div className="detail-contact-card">
+              <span className="eyebrow gold">Atendimento exclusivo</span>
+              <h2>Receba informações completas deste imóvel</h2>
+              <p>Valores, plantas, disponibilidade e condições diretamente com Bernardo Xavier.</p>
+              <a className="button button-gold" href={whatsappUrl(message)}>Falar com Bernardo</a>
+            </div>
           </div>
         </div>
       </section>
@@ -58,7 +69,9 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
               </div>
             ))}
           </div>
-          <p className="demo-note light">Página demonstrativa. Não disponibiliza book completo e não representa uma oferta imobiliária real.</p>
+          <p className="demo-note light">
+            Estrutura demonstrativa. Nos cards/listagens aparece somente a fachada. A página individual reúne a galeria completa do mesmo empreendimento.
+          </p>
         </div>
       </section>
 

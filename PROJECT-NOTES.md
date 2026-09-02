@@ -13,7 +13,9 @@ https://lancamento.invexo.com.br/rj/
 
 ## O que NÃO deve ser feito
 - Não copiar literalmente a Invexo.
-- Não disponibilizar o book completo dos empreendimentos.
+- Não disponibilizar o PDF/book comercial completo para download.
+- A página individual DEVE exibir a galeria completa de fotos do próprio empreendimento (fachadas, interiores, áreas comuns e vistas disponíveis).
+- Nos cards e listagens, a imagem de capa deve ser sempre a fachada externa do empreendimento.
 - Não inventar informações, valores ou empreendimentos reais.
 
 ## Posicionamento

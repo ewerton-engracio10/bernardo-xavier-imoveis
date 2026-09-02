@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25343a"/><stop offset="1" stop-color="#0d1215"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect x="190" y="420" width="1220" height="250" rx="20" fill="#193b49" stroke="#cdaa6d" stroke-opacity=".45"/>
+  <rect x="250" y="480" width="1100" height="130" rx="18" fill="#2c6577" fill-opacity=".75"/>
+  <circle cx="360" cy="320" r="65" fill="#cdaa6d" fill-opacity=".22"/>
+  <circle cx="1240" cy="300" r="85" fill="#cdaa6d" fill-opacity=".16"/>
+  <text x="80" y="760" fill="#e2c58f" font-family="Arial, sans-serif" font-size="28" letter-spacing="7">ÁREA DE LAZER</text>
+  <text x="80" y="810" fill="#85858b" font-family="Arial, sans-serif" font-size="18" letter-spacing="3">SUBSTITUIR PELA FOTO REAL DO MESMO EMPREENDIMENTO</text>
+</svg>

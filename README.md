@@ -27,15 +27,19 @@ bernardo-xavier-imoveis/
 │   ├── Footer.tsx
 │   ├── Header.tsx
 │   ├── PropertyCard.tsx
+│   ├── PropertyGallery.tsx
 │   └── SearchPanel.tsx
 ├── data/
 │   └── properties.ts
 ├── lib/
 │   └── site-config.ts
 ├── public/
-│   └── brand/
-│       ├── logo-bernardo-xavier.png
-│       └── identidade-visual-referencia.png
+│   ├── brand/
+│   │   ├── logo-bernardo-xavier.png
+│   │   └── identidade-visual-referencia.png
+│   └── images/properties/
+│       ├── README.md
+│       └── placeholders/
 ├── .gitignore
 ├── next.config.ts
 ├── package.json
@@ -48,7 +52,7 @@ bernardo-xavier-imoveis/
 1. Abrir `lib/site-config.ts` e inserir o número real do WhatsApp somente com DDI + DDD + número, sem símbolos. Exemplo de formato: `5521999999999`.
 2. Inserir a URL correta do Facebook, caso seja usada.
 3. Substituir os empreendimentos demonstrativos em `data/properties.ts` pelos empreendimentos reais.
-4. Substituir os placeholders visuais pelas fotos oficiais autorizadas dos empreendimentos.
+4. Substituir os placeholders pelas fotos oficiais autorizadas de cada empreendimento. A capa dos cards deve ser sempre uma fachada externa; a página individual deve reunir todas as fotos do mesmo imóvel/empreendimento.
 5. Revisar valores, metragem, endereço, disponibilidade e demais dados antes da publicação.
 
 ## Rodar localmente
@@ -70,3 +74,10 @@ Abra `http://localhost:3000`.
 ## Observação importante
 
 Os imóveis que acompanham esta primeira estrutura são **demonstrativos**. Eles não devem ser apresentados ao público como ofertas reais.
+
+## Regra de imagens
+
+- **Home/listagem:** somente fachada externa nos cards.
+- **Ao clicar no imóvel:** abre a página individual com galeria completa, miniaturas e visualização ampliada.
+- **Galeria individual:** fachada + interiores + áreas comuns + vistas, sempre pertencentes ao mesmo empreendimento.
+- O PDF/book comercial não precisa ser disponibilizado para download.

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#344958"/><stop offset=".55" stop-color="#758b91"/><stop offset="1" stop-color="#17242d"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <path d="M0 650 C250 520 430 620 650 555 C850 500 1040 585 1200 520 C1360 455 1450 520 1600 470 L1600 900 L0 900 Z" fill="#10161b"/>
+  <path d="M0 635 C280 580 480 650 710 610 C920 575 1120 630 1600 560" fill="none" stroke="#cdaa6d" stroke-opacity=".45" stroke-width="4"/>
+  <text x="80" y="760" fill="#e2c58f" font-family="Arial, sans-serif" font-size="28" letter-spacing="7">VISTA / LOCALIZAÇÃO</text>
+  <text x="80" y="810" fill="#d0d0d2" font-family="Arial, sans-serif" font-size="18" letter-spacing="3">SUBSTITUIR PELA FOTO REAL DO MESMO EMPREENDIMENTO</text>
+</svg>
