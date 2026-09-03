@@ -2,15 +2,11 @@ import Link from "next/link";
 import type { Property } from "@/data/properties";
 
 export function PropertyCard({ property }: { property: Property; index?: number }) {
-  const coverStyle = property.slug === "nook-copacabana"
-    ? { transform: "scale(1.68)", transformOrigin: "center center" }
-    : undefined;
-
   return (
     <article className="property-card">
       <Link href={`/empreendimentos/${property.slug}`} className="property-card-link" aria-label={`Abrir detalhes e fotos de ${property.name}`}>
         <div className="property-image">
-          <img src={property.coverImage.src} alt={property.coverImage.alt} style={coverStyle} />
+          <img src={property.coverImage.src} alt={property.coverImage.alt} />
           <span className="property-status">{property.status}</span>
         </div>
         <div className="property-content">
