@@ -1,0 +1,12 @@
+.brand-image-link,.footer-logo-link{background:transparent!important}
+.brand-logo{width:260px!important;height:78px!important;object-fit:contain!important;object-position:left center!important;mix-blend-mode:normal!important;background:transparent!important}
+.footer-logo{width:390px!important;max-width:100%!important;height:auto!important;margin-bottom:18px!important;mix-blend-mode:normal!important;background:transparent!important}
+.social-icon-buttons{display:flex;align-items:center;gap:14px;margin:8px 0 18px}
+.social-icon-button{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:58px;height:58px;border-radius:16px;transition:transform .2s ease,box-shadow .2s ease;box-shadow:0 8px 22px rgba(47,38,28,.10);line-height:1!important}
+.social-icon-button:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(47,38,28,.16)}
+.social-icon-button img{width:27px;height:27px;display:block}
+.instagram-button{background:radial-gradient(circle at 32% 100%,#fed373 0 18%,#f15245 33%,#d92e7f 54%,#9b36b7 73%,#515ecf 100%)}
+.whatsapp-button{background:#25D366}
+.footer-location{margin-top:4px}
+@media(max-width:900px){.brand-logo{width:215px!important;height:66px!important}.footer-logo{width:330px!important}}
+@media(max-width:620px){.brand-logo{width:195px!important;height:60px!important}.footer-logo{width:300px!important}.social-icon-button{width:54px;height:54px;border-radius:15px}.social-icon-button img{width:25px;height:25px}}
