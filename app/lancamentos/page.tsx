@@ -17,14 +17,13 @@ export default function LancamentosPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section featured-section">
         <div className="container">
           <div className="property-grid">
-            {properties.map((property, index) => (
-              <PropertyCard key={property.slug} property={property} index={index} />
+            {properties.map((property) => (
+              <PropertyCard key={property.slug} property={property} />
             ))}
           </div>
-          <p className="demo-note">Conteúdo demonstrativo. Substituir pelos empreendimentos reais antes da publicação.</p>
         </div>
       </section>
       <Footer />

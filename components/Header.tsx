@@ -5,14 +5,9 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link href="/" className="brand brand-image-link" aria-label="Bernardo Xavier Imóveis - início">
-          <img
-            className="brand-logo"
-            src="/brand/logo-bernardo-xavier-dark.png"
-            alt="Bernardo Xavier Imóveis"
-          />
+        <Link href="/" className="brand-image-link" aria-label="Bernardo Xavier Imóveis - início">
+          <img className="brand-logo" src="/brand/logo-bernardo-xavier.png" alt="Bernardo Xavier Imóveis" />
         </Link>
-
         <nav className="desktop-nav" aria-label="Navegação principal">
           <Link href="/lancamentos">Lançamentos</Link>
           <Link href="/#sobre">Sobre</Link>
@@ -20,10 +15,7 @@ export function Header() {
           <Link href="/#curadoria">Curadoria</Link>
           <Link href="/#contato">Contato</Link>
         </nav>
-
-        <a className="button button-gold header-cta" href={whatsappUrl()}>
-          Falar com Bernardo
-        </a>
+        <a className="button button-gold header-cta" href={whatsappUrl()}>Falar com Bernardo</a>
       </div>
     </header>
   );
