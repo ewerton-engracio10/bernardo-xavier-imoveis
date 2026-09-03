@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import "./brand-social.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
