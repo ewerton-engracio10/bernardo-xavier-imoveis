@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { brandLogo } from "@/lib/brand-logo";
 import { whatsappUrl } from "@/lib/site-config";
 
 export function Header() {
@@ -6,7 +7,7 @@ export function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="brand-image-link" aria-label="Bernardo Xavier Imóveis - início">
-          <img className="brand-logo" src="/brand/logo-bernardo-xavier.png" alt="Bernardo Xavier Imóveis" />
+          <img className="brand-logo" src={brandLogo} alt="Bernardo Xavier Imóveis" />
         </Link>
         <nav className="desktop-nav" aria-label="Navegação principal">
           <Link href="/lancamentos">Lançamentos</Link>
@@ -15,7 +16,7 @@ export function Header() {
           <Link href="/#curadoria">Curadoria</Link>
           <Link href="/#contato">Contato</Link>
         </nav>
-        <a className="button button-gold header-cta" href={whatsappUrl()}>Falar com Bernardo</a>
+        <a className="button button-gold header-cta" href={whatsappUrl()} target="_blank" rel="noreferrer">Falar com Bernardo</a>
       </div>
     </header>
   );
