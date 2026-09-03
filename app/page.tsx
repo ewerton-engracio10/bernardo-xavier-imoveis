@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { PropertyCard } from "@/components/PropertyCard";
 import { SearchPanel } from "@/components/SearchPanel";
 import { properties } from "@/data/properties";
+import { bernardoPhoto } from "@/lib/bernardo-photo";
 import { siteConfig, whatsappUrl } from "@/lib/site-config";
 
 export default function HomePage() {
@@ -31,7 +32,7 @@ export default function HomePage() {
       <section className="section about-section" id="sobre">
         <div className="container about-grid">
           <div className="bernardo-photo-wrap">
-            <img src="/images/bernardo/bernardo-social.jpg" alt="Bernardo Xavier" className="bernardo-photo" />
+            <img src={bernardoPhoto} alt="Bernardo Xavier" className="bernardo-photo" />
           </div>
           <div className="about-copy">
             <span className="eyebrow gold">Atendimento personalizado</span>
