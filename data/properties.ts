@@ -110,12 +110,12 @@ export const properties: Property[] = [
       "Próximo à Praia de Copacabana e ao metrô",
     ],
     coverImage: {
-      src: "https://performace.internit.com.br//media//uploads/galerias/249/0fe62f1edf9f8581c8cb9fcfaf295234.jpeg",
+      src: "https://lancamentosrj.com/wp-content/uploads/2024/04/Nook-Copacabana01.jpg",
       alt: "Fachada do Nook Copacabana",
       type: "Fachada",
     },
     gallery: [
-      { src: "https://performace.internit.com.br//media//uploads/galerias/249/0fe62f1edf9f8581c8cb9fcfaf295234.jpeg", alt: "Fachada do Nook Copacabana", type: "Fachada" },
+      { src: "https://lancamentosrj.com/wp-content/uploads/2024/04/Nook-Copacabana01.jpg", alt: "Fachada do Nook Copacabana", type: "Fachada" },
       { src: "https://performace.internit.com.br//media//uploads/galerias/249/494be275460397ac92c37b59add956cf.jpg", alt: "Living do Nook Copacabana", type: "Interior" },
       { src: "https://performace.internit.com.br//media//uploads/galerias/249/c98378ab2e29e2418e23ec1859360679.jpg", alt: "Academia do Nook Copacabana", type: "Área comum" },
       { src: "https://performace.internit.com.br//media//uploads/galerias/249/9d180ff0df800586b6aaf2572092c62d.jpeg", alt: "Garden do Nook Copacabana", type: "Área comum" },
