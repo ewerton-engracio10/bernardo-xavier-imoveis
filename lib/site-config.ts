@@ -14,7 +14,8 @@ export const siteConfig = {
     url: "",
   },
   whatsapp: {
-    number: "",
+    number: "555181251418",
+    display: "+55 51 8125-1418",
     defaultMessage:
       "Olá, Bernardo. Vi um empreendimento no seu site e gostaria de receber mais informações.",
   },
