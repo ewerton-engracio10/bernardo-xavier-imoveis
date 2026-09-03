@@ -9,112 +9,116 @@ export type Property = {
   name: string;
   neighborhood: string;
   city: string;
-  status: "Lançamento" | "Breve lançamento" | "Em obras";
+  address: string;
+  status: string;
   bedrooms: string;
   area: string;
   parking: string;
   priceFrom: string;
+  delivery: string;
   shortDescription: string;
   highlights: string[];
-  /** A imagem dos cards/listagens deve ser SEMPRE uma fachada externa. */
   coverImage: PropertyImage;
-  /** Galeria completa exibida somente na página individual do empreendimento. */
   gallery: PropertyImage[];
 };
 
-const demoGallery = (neighborhood: string): PropertyImage[] => [
-  {
-    src: "/images/properties/placeholders/fachada.svg",
-    alt: `Fachada do empreendimento em ${neighborhood}`,
-    type: "Fachada",
-  },
-  {
-    src: "/images/properties/placeholders/living.svg",
-    alt: `Living do empreendimento em ${neighborhood}`,
-    type: "Interior",
-  },
-  {
-    src: "/images/properties/placeholders/suite.svg",
-    alt: `Suíte do empreendimento em ${neighborhood}`,
-    type: "Interior",
-  },
-  {
-    src: "/images/properties/placeholders/leisure.svg",
-    alt: `Área de lazer do empreendimento em ${neighborhood}`,
-    type: "Área comum",
-  },
-  {
-    src: "/images/properties/placeholders/view.svg",
-    alt: `Vista do empreendimento em ${neighborhood}`,
-    type: "Vista",
-  },
-];
-
-// IMPORTANTE: dados e imagens demonstrativos para estruturar o projeto.
-// Antes da apresentação final/publicação, substituir cada conjunto pela fachada
-// e pelas fotos reais DO MESMO empreendimento.
 export const properties: Property[] = [
   {
-    slug: "residencial-ipanema-demo",
-    name: "Residencial Ipanema",
+    slug: "tempo-ipanema",
+    name: "Tempo Ipanema",
     neighborhood: "Ipanema",
     city: "Rio de Janeiro",
+    address: "Rua Redentor, 308 — Ipanema, Rio de Janeiro",
     status: "Lançamento",
-    bedrooms: "2 a 4 quartos",
-    area: "80 a 220 m²",
-    parking: "1 a 3 vagas",
-    priceFrom: "Sob consulta",
+    bedrooms: "3 a 4 suítes",
+    area: "166 a 382 m²",
+    parking: "2 vagas",
+    priceFrom: "R$ 5.699.970",
+    delivery: "Agosto/2026",
     shortDescription:
-      "Empreendimento demonstrativo para apresentar o padrão visual e a organização do catálogo.",
+      "Projeto residencial exclusivo no coração de Ipanema, com arquitetura contemporânea, plantas amplas e localização entre a Lagoa Rodrigo de Freitas e a Praia de Ipanema.",
     highlights: [
-      "Localização privilegiada",
-      "Arquitetura contemporânea",
-      "Plantas selecionadas",
-      "Atendimento direto com Bernardo",
+      "Arquitetura assinada pela Cité Arquitetura",
+      "Apartamentos e coberturas com plantas amplas",
+      "Espaço fitness, salão gourmet e sala de reunião",
+      "Localização privilegiada em Ipanema",
     ],
-    coverImage: demoGallery("Ipanema")[0],
-    gallery: demoGallery("Ipanema"),
+    coverImage: {
+      src: "https://betaimages.lopes.com.br/realestate/med/REB454606/01_fachada_tempo_ipanema.jpg",
+      alt: "Fachada do Tempo Ipanema",
+      type: "Fachada",
+    },
+    gallery: [
+      { src: "https://betaimages.lopes.com.br/realestate/med/REB454606/01_fachada_tempo_ipanema.jpg", alt: "Fachada do Tempo Ipanema", type: "Fachada" },
+      { src: "https://betaimages.lopes.com.br/realestate/med/REB454606/06_sala_tempo_ipanema.jpg", alt: "Living do Tempo Ipanema", type: "Interior" },
+      { src: "https://betaimages.lopes.com.br/realestate/med/REB454606/16_Cozinha_tempo_ipanema.jpg", alt: "Cozinha do Tempo Ipanema", type: "Interior" },
+      { src: "https://betaimages.lopes.com.br/realestate/med/REB454606/17_quarto_tempo_ipanema.jpg", alt: "Suíte do Tempo Ipanema", type: "Interior" },
+      { src: "https://betaimages.lopes.com.br/realestate/med/REB454606/04_area_de_lazer_tempo_ipanema.jpg", alt: "Área de lazer do Tempo Ipanema", type: "Área comum" },
+      { src: "https://betaimages.lopes.com.br/realestate/med/REB454606/11_cobertura_tempo_ipanema.jpg", alt: "Cobertura do Tempo Ipanema", type: "Interior" },
+    ],
   },
   {
-    slug: "residencial-leblon-demo",
-    name: "Residencial Leblon",
+    slug: "urquiza-leblon",
+    name: "Urquiza Leblon",
     neighborhood: "Leblon",
     city: "Rio de Janeiro",
-    status: "Breve lançamento",
-    bedrooms: "3 a 4 quartos",
-    area: "140 a 300 m²",
-    parking: "2 a 4 vagas",
-    priceFrom: "Sob consulta",
+    address: "Rua General Urquiza, 104 — Leblon, Rio de Janeiro",
+    status: "Pronto para morar",
+    bedrooms: "até 3 suítes",
+    area: "67 a 130 m²",
+    parking: "1 vaga",
+    priceFrom: "R$ 2.700.000",
+    delivery: "Pronto para morar",
     shortDescription:
-      "Página demonstrativa inspirada no fluxo de consulta que Bernardo utiliza para selecionar oportunidades.",
+      "Residencial boutique no Leblon, com apenas 14 unidades, fachada curva marcante, plantas flexíveis e integração entre arquitetura contemporânea e o estilo de vida do bairro.",
     highlights: [
-      "Endereço estratégico",
-      "Perfil de alto padrão",
-      "Informações objetivas",
-      "Contato consultivo",
+      "Somente 14 unidades residenciais",
+      "Fachada assinada pela Cité Arquitetura",
+      "Plantas flexíveis e coberturas duplex",
+      "A poucos minutos da Praia do Leblon",
     ],
-    coverImage: demoGallery("Leblon")[0],
-    gallery: demoGallery("Leblon"),
+    coverImage: {
+      src: "https://images.ctfassets.net/dolx5dafyuwq/1DK7eHNTHkXygXzzOW9tHi/e6c07e58a5d8ac692564b93abd88ba32/2024-08-URQUIZA-003.webp",
+      alt: "Fachada do Edifício Urquiza no Leblon",
+      type: "Fachada",
+    },
+    gallery: [
+      { src: "https://images.ctfassets.net/dolx5dafyuwq/1DK7eHNTHkXygXzzOW9tHi/e6c07e58a5d8ac692564b93abd88ba32/2024-08-URQUIZA-003.webp", alt: "Fachada do Edifício Urquiza", type: "Fachada" },
+      { src: "https://images.ctfassets.net/dolx5dafyuwq/168hnlrvST4ctVJGIHFqL9/9e44faba815dc232fb8b19f73d08eea7/2024-08-URQUIZA-002.webp", alt: "Fachada noturna do Urquiza", type: "Fachada" },
+      { src: "https://images.ctfassets.net/dolx5dafyuwq/0wNtuNeWQEBkhFoSPopyk/f269870645e42a721135300def23ebc1/2024-08-URQUIZA-029.webp", alt: "Detalhe arquitetônico do Urquiza", type: "Área comum" },
+      { src: "https://lancamentos-rj.com/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-14-at-12.49.08.jpeg", alt: "Living do Urquiza Leblon", type: "Interior" },
+    ],
   },
   {
-    slug: "residencial-copacabana-demo",
-    name: "Residencial Copacabana",
+    slug: "nook-copacabana",
+    name: "Nook Copacabana",
     neighborhood: "Copacabana",
     city: "Rio de Janeiro",
-    status: "Em obras",
-    bedrooms: "1 a 3 quartos",
-    area: "55 a 160 m²",
-    parking: "1 a 2 vagas",
-    priceFrom: "Sob consulta",
+    address: "Rua Hilário de Gouveia, 49 — Copacabana, Rio de Janeiro",
+    status: "Lançamento",
+    bedrooms: "1 a 2 quartos",
+    area: "40 a 155 m²",
+    parking: "até 1 vaga",
+    priceFrom: "R$ 1.395.301",
+    delivery: "Julho/2026",
     shortDescription:
-      "Exemplo de empreendimento organizado por bairro, tipologia e faixa de investimento.",
+      "Empreendimento contemporâneo em Copacabana com studios, apartamentos, gardens e coberturas, além de áreas de convivência pensadas para uma rotina urbana sofisticada.",
     highlights: [
-      "Zona Sul do Rio",
-      "Curadoria estratégica",
-      "Apresentação objetiva",
-      "Galeria completa na página do imóvel",
+      "Studios, apartamentos, gardens e coberturas",
+      "Academia, coworking e áreas de convivência",
+      "Arquitetura contemporânea",
+      "Próximo à Praia de Copacabana e ao metrô",
     ],
-    coverImage: demoGallery("Copacabana")[0],
-    gallery: demoGallery("Copacabana"),
+    coverImage: {
+      src: "/images/properties/nook-copacabana/fachada.png",
+      alt: "Fachada do Nook Copacabana",
+      type: "Fachada",
+    },
+    gallery: [
+      { src: "/images/properties/nook-copacabana/fachada.png", alt: "Fachada do Nook Copacabana", type: "Fachada" },
+      { src: "https://performace.internit.com.br//media//uploads/galerias/249/494be275460397ac92c37b59add956cf.jpg", alt: "Living do Nook Copacabana", type: "Interior" },
+      { src: "https://performace.internit.com.br//media//uploads/galerias/249/c98378ab2e29e2418e23ec1859360679.jpg", alt: "Academia do Nook Copacabana", type: "Área comum" },
+      { src: "https://performace.internit.com.br//media//uploads/galerias/249/9d180ff0df800586b6aaf2572092c62d.jpeg", alt: "Garden do Nook Copacabana", type: "Área comum" },
+    ],
   },
 ];
