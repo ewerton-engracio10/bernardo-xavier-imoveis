@@ -1,0 +1,1 @@
+Foto do Bernardo incorporada no código como data URI para evitar falha de asset estático no deploy.
