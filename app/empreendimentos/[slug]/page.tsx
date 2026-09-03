@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { PropertyGallery } from "@/components/PropertyGallery";
 import { properties } from "@/data/properties";
+import { bernardoPhoto } from "@/lib/bernardo-photo";
 import { whatsappUrl } from "@/lib/site-config";
 
 export function generateStaticParams() {
@@ -73,7 +74,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
           </div>
 
           <div className="bernardo-contact-strip">
-            <img src="/images/bernardo/bernardo-social.jpg" alt="Bernardo Xavier" />
+            <img src={bernardoPhoto} alt="Bernardo Xavier" />
             <div>
               <h3>Fale diretamente com Bernardo</h3>
               <p>Tire dúvidas, receba mais informações e conheça condições exclusivas.</p>
