@@ -6,10 +6,13 @@ export function Footer() {
     <footer className="footer" id="contato">
       <div className="container footer-grid">
         <div>
-          <div className="brand footer-brand">
-            <span className="brand-mark">BX</span>
-            <span className="brand-name">Bernardo Xavier <small>Imóveis</small></span>
-          </div>
+          <Link href="/" className="footer-logo-link" aria-label="Bernardo Xavier Imóveis - início">
+            <img
+              className="footer-logo"
+              src="/brand/logo-bernardo-xavier-dark.png"
+              alt="Bernardo Xavier Imóveis"
+            />
+          </Link>
           <p>{siteConfig.tagline}</p>
           <p>{siteConfig.city} | {siteConfig.region}</p>
         </div>

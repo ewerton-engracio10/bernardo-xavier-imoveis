@@ -426,3 +426,92 @@ button, input, select { font: inherit; }
   .lightbox-nav.previous { left: 8px; }
   .lightbox-nav.next { right: 8px; }
 }
+
+/* ===== Logo oficial aprovado ===== */
+.brand-image-link {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.brand-logo {
+  width: 214px;
+  height: 58px;
+  display: block;
+  object-fit: contain;
+  object-position: left center;
+}
+.footer-logo-link { display: inline-block; margin-bottom: 18px; }
+.footer-logo {
+  width: 270px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* ===== Clique e abertura do empreendimento ===== */
+.property-card-link { display: block; height: 100%; }
+.property-card { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.property-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(205,170,109,.34);
+  box-shadow: 0 24px 55px rgba(0,0,0,.25);
+}
+.property-open-hint {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 3;
+  padding: 7px 10px;
+  background: rgba(205,170,109,.92);
+  color: #111;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: .22s ease;
+}
+.property-card:hover .property-open-hint { opacity: 1; transform: translateY(0); }
+.property-details-cta {
+  display: inline-block;
+  color: var(--gold-soft);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.detail-back {
+  display: inline-block;
+  margin-bottom: 26px;
+  color: #bdbdbd;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.detail-back:hover { color: var(--gold-soft); }
+.detail-gallery-intro {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: baseline;
+  margin: 0 0 12px;
+}
+.detail-gallery-intro span {
+  color: var(--gold-soft);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+}
+.detail-gallery-intro small { color: #8f8f93; font-size: 11px; }
+
+@media (max-width: 980px) {
+  .brand-logo { width: 190px; }
+  .detail-gallery-intro { align-items: flex-start; flex-direction: column; gap: 5px; }
+}
+
+@media (max-width: 640px) {
+  .brand-logo { width: 132px; height: 44px; }
+  .footer-logo { width: 230px; }
+  .property-open-hint { opacity: 1; transform: none; }
+}

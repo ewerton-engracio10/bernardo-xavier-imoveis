@@ -5,9 +5,12 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link href="/" className="brand" aria-label="Bernardo Xavier Imóveis - início">
-          <span className="brand-mark">BX</span>
-          <span className="brand-name">Bernardo Xavier <small>Imóveis</small></span>
+        <Link href="/" className="brand brand-image-link" aria-label="Bernardo Xavier Imóveis - início">
+          <img
+            className="brand-logo"
+            src="/brand/logo-bernardo-xavier-dark.png"
+            alt="Bernardo Xavier Imóveis"
+          />
         </Link>
 
         <nav className="desktop-nav" aria-label="Navegação principal">

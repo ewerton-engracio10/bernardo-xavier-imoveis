@@ -34,3 +34,14 @@ https://lancamento.invexo.com.br/rj/
 - Foto profissional oficial do Bernardo.
 - Lista real de empreendimentos.
 - Fotos, valores, endereço e informações oficiais de cada empreendimento.
+
+## Correção do logo e fluxo dos imóveis — 02/09/2026
+- O cabeçalho e o rodapé devem usar o logotipo aprovado “Bernardo Xavier Imóveis”, e não uma marca recriada em texto/CSS.
+- O arquivo original aprovado permanece em `/public/brand/logo-bernardo-xavier.png`.
+- Para fundos escuros foi criada uma adaptação de contraste da mesma arte, sem alterar desenho/proporção: `/public/brand/logo-bernardo-xavier-dark.png`.
+- Na home e em `/lancamentos`, cada card mostra somente a fachada externa.
+- Todo o card é clicável: imagem, nome, conteúdo e CTA “Ver detalhes e fotos”.
+- O clique abre `/empreendimentos/[slug]`.
+- Na página individual, a galeria fica em destaque antes das informações comerciais.
+- Clique na foto principal abre lightbox em tela cheia; miniaturas trocam a imagem; setas e teclado navegam pela galeria.
+- Todas as fotos da galeria devem pertencer ao mesmo empreendimento.

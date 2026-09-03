@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -22,6 +23,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
 
       <section className="detail-hero">
         <div className="container">
+          <Link className="detail-back" href="/lancamentos">← Voltar aos lançamentos</Link>
           <div className="detail-title">
             <div>
               <span className="eyebrow gold">{property.status}</span>
@@ -32,6 +34,11 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
               <small>Valor de investimento</small>
               <strong>{property.priceFrom}</strong>
             </div>
+          </div>
+
+          <div className="detail-gallery-intro">
+            <span>Galeria do empreendimento</span>
+            <small>Clique na foto principal para ampliar. Use as miniaturas para navegar por todos os ambientes.</small>
           </div>
 
           <PropertyGallery images={property.gallery} propertyName={property.name} />
