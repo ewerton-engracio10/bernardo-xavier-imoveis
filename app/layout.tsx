@@ -3,6 +3,7 @@ import { Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import "./brand-social.css";
 import "./mobile-menu.css";
+import "./detail-mobile.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
