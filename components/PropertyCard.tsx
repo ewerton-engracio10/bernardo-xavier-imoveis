@@ -3,7 +3,7 @@ import type { Property } from "@/data/properties";
 
 export function PropertyCard({ property }: { property: Property; index?: number }) {
   return (
-    <article className={`property-card property-card-${property.slug}`}>
+<article className={`property-card property-card-${property.slug}`}>
       <Link href={`/empreendimentos/${property.slug}`} className="property-card-link" aria-label={`Abrir detalhes e fotos de ${property.name}`}>
         <div className="property-image">
           <img src={property.coverImage.src} alt={property.coverImage.alt} />
