@@ -1,0 +1,60 @@
+@media (max-width: 760px){
+  .property-detail-page{padding:18px 0 48px;overflow-x:hidden}
+  .property-detail-page>.container{width:min(100% - 28px,1180px)}
+  .breadcrumb{margin:0 0 22px;gap:7px;font-size:9px;line-height:1.5}
+
+  .property-detail-top{display:flex;flex-direction:column;gap:24px;width:100%}
+  .property-detail-copy{padding:0;width:100%}
+  .property-detail-copy .eyebrow{font-size:10px;line-height:1.5}
+  .property-detail-copy h1{font-size:clamp(40px,12vw,54px);line-height:1.02;margin:10px 0 14px;max-width:100%}
+  .detail-inline-meta{gap:10px 16px;font-size:11px;line-height:1.5}
+  .detail-investment{margin:24px 0 16px}
+  .detail-investment strong{font-size:22px}
+  .detail-head-actions{display:grid;grid-template-columns:1fr;gap:10px;width:100%}
+  .detail-head-actions .button{width:100%;min-width:0;min-height:50px}
+
+  .property-gallery,.approved-gallery{width:100%;min-width:0}
+  .gallery-stage-wrap{width:100%;height:auto;aspect-ratio:4/5;max-height:none}
+  .gallery-main{width:100%;height:100%}
+  .gallery-main img{width:100%;height:100%;object-fit:cover}
+  .gallery-arrow{width:40px;height:40px;font-size:24px}
+  .gallery-arrow-left{left:10px}
+  .gallery-arrow-right{right:10px}
+  .gallery-thumbnails{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:8px}
+  .gallery-thumb{width:100%;height:auto;aspect-ratio:1/1;padding:0}
+
+  .detail-lower-grid{display:flex;flex-direction:column;gap:26px;margin-top:38px;width:100%}
+  .about-property,.info-card{width:100%;min-width:0}
+  .about-property h2{font-size:30px;line-height:1.15;margin-bottom:14px}
+  .about-property p{font-size:14px;line-height:1.7;margin:0}
+  .about-property ul{margin-top:20px;gap:10px}
+  .about-property li{font-size:13px;line-height:1.55}
+  .info-card{padding:22px 18px}
+  .info-card h3{font-size:24px;line-height:1.2;margin-bottom:10px}
+  .info-card dl div{padding:14px 0}
+  .info-card dt{font-size:9px}
+  .info-card dd{font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+
+  .bernardo-contact-strip{display:flex;flex-direction:column;gap:14px;width:100%;margin-top:34px;padding:24px 18px;text-align:center}
+  .bernardo-contact-strip img{width:86px;height:86px;margin:0 auto}
+  .bernardo-contact-strip h3{font-size:28px;line-height:1.15;margin:0 auto 6px;max-width:320px}
+  .bernardo-contact-strip p{font-size:13px;line-height:1.55;margin:0 auto;max-width:330px}
+  .bernardo-contact-strip .button{width:100%;min-height:52px;margin-top:4px}
+
+  .lightbox{padding:20px 12px}
+  .lightbox figure{max-width:100%;width:100%}
+  .lightbox figure img{max-height:78vh;width:100%;object-fit:contain}
+  .lightbox-close{right:14px;top:10px;font-size:36px}
+  .lightbox-nav{font-size:36px}
+  .lightbox-nav.previous{left:8px}
+  .lightbox-nav.next{right:8px}
+}
+
+@media (max-width: 420px){
+  .property-detail-page>.container{width:min(100% - 22px,1180px)}
+  .property-detail-copy h1{font-size:42px}
+  .gallery-stage-wrap{aspect-ratio:4/5}
+  .gallery-thumbnails{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .about-property h2{font-size:28px}
+  .bernardo-contact-strip h3{font-size:26px}
+}
